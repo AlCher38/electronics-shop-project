@@ -70,9 +70,9 @@ def test_item_add():
 
 def test_instantiate_from_csv_file_not_found():
     with pytest.raises(FileNotFoundError):
-        Item.instantiate_from_csv(default="items_not_found.csv")
+        Item.instantiate_from_csv()
 
 
 def test_instantiate_from_csv_invalid_data():
     with pytest.raises(InstantiateCSVError):
-        Item.instantiate_from_csv(default=os.path.abspath('tests/test_items.csv'))
+        Item.instantiate_from_csv()
